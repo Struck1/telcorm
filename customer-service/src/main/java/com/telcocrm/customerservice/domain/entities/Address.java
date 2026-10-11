@@ -16,7 +16,7 @@ public class Address extends BaseEntity<UUID> {
     private String houseNumber;
     private String postalCode;
     private String description;
-    private boolean isDefault;
+    private boolean defaultAddress;
     private Customer customer;
     private District district;
     private List<BillingAccount> billingAccounts = new ArrayList<>();
@@ -80,12 +80,12 @@ public class Address extends BaseEntity<UUID> {
         this.description = description;
     }
 
-    public boolean isDefault() {
-        return isDefault;
+    public boolean isDefaultAddress() {
+        return defaultAddress;
     }
 
-    public void setDefault(boolean aDefault) {
-        isDefault = aDefault;
+    public void setDefaultAddress(boolean defaultAddress) {
+        this.defaultAddress = defaultAddress;
     }
 
     public Customer getCustomer() {

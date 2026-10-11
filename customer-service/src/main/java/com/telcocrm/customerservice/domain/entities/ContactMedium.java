@@ -10,7 +10,7 @@ public class ContactMedium extends BaseEntity<UUID> {
     private UUID customerId;
     private ContactMediumType contactMediumType;
     private String value;
-    private boolean isPrimary;
+    private boolean primary;
     private Customer customer;
 
     public ContactMedium() {
@@ -41,11 +41,11 @@ public class ContactMedium extends BaseEntity<UUID> {
     }
 
     public boolean isPrimary() {
-        return isPrimary;
+        return primary;
     }
 
     public void setPrimary(boolean primary) {
-        isPrimary = primary;
+        this.primary = primary;
     }
 
     public Customer getCustomer() {
